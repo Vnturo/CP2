@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList, SafeAreaView } from 'react-native';
 import GridItem from '../components/GridItem';
 
 const HomeScreen = ({ navigation }) => {
@@ -18,11 +18,11 @@ const HomeScreen = ({ navigation }) => {
   ];
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={menuItems}
         numColumns={3}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <GridItem 
             title={item.title} 
@@ -36,18 +36,18 @@ const HomeScreen = ({ navigation }) => {
             }} 
           />
         )}
+        columnWrapperStyle={{ justifyContent: "space-between" }} // Ensures proper grid spacing
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#257f66',
     paddingTop: 50,
+    paddingHorizontal: 10, // Ensures space from screen edges
   },
 });
 

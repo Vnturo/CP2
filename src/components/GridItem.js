@@ -1,38 +1,27 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet, View, Dimensions } from 'react-native';
 
-const GridItem = ({ title, image, onPress }) => {
+const GridItem = ({ image, onPress }) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={onPress} style={styles.imageWrapper}>
-        <Image source={image} style={styles.image} />
-      </TouchableOpacity>
-      <Text style={styles.text}>{title}</Text>
-    </View>
+    <TouchableOpacity style={styles.gridItem} onPress={onPress}>
+      <Image source={image} style={styles.image} />
+    </TouchableOpacity>
   );
 };
 
+const { width } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    alignItems: 'center', // Center content horizontally
-    justifyContent: 'center',
-    margin: 5,
-    padding: 10,
-  },
-  imageWrapper: {
-    alignSelf: 'center', // Ensures the image is centered in its space
+  gridItem: {
+    width: width / 3.4, // Each item takes up 1/3 of screen width (with padding)
+    aspectRatio: 1, // Ensures the item is square
+    margin: 5, // Space between items
   },
   image: {
-    width: 120, // Adjust size as needed
-    height: 120,
-    resizeMode: 'contain',
-  },
-  text: {
-    marginTop: 5,
-    fontSize: 14,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover", // Makes image fully cover the icon
+    borderRadius: 10, // Optional: round corners
   },
 });
 

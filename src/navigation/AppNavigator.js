@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '../screens/HomeScreen';
-import CampusMapScreen from '../screens/CampusMapScreen';
-import WebViewScreen from '../screens/WebViewScreen'; // Ensure this file exists
+import HomeScreen from "../screens/HomeScreen";
+import CampusMapScreen from "../screens/CampusMapScreen";
+import WebViewScreen from "../screens/WebViewScreen"; // Ensure this file exists
 
 const Stack = createStackNavigator();
 
