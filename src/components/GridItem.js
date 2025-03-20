@@ -1,27 +1,56 @@
-import React from 'react';
-import { TouchableOpacity, Image, StyleSheet, View, Dimensions } from 'react-native';
+import React, { useRef, useEffect } from 'react';
+import { TouchableOpacity, Image, StyleSheet, Animated, Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window');
 
 const GridItem = ({ image, onPress }) => {
+  const scaleAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      friction: 5,
+      tension: 80,
+      useNativeDriver: true,
+    }).start();
+  }, []);
+
   return (
-    <TouchableOpacity style={styles.gridItem} onPress={onPress}>
-      <Image source={image} style={styles.image} />
-    </TouchableOpacity>
+    <Animated.View style={[styles.gridItem, { transform: [{ scale: scaleAnim }] }]}>
+      <TouchableOpacity 
+        style={styles.touchable}
+        onPress={onPress}
+        activeOpacity={0.7}
+      >
+        <Image source={image} style={styles.image} />
+      </TouchableOpacity>
+    </Animated.View>
   );
 };
 
-const { width } = Dimensions.get("window");
-
 const styles = StyleSheet.create({
   gridItem: {
-    width: width / 3.4, // Each item takes up 1/3 of screen width (with padding)
-    aspectRatio: 1, // Ensures the item is square
-    margin: 5, // Space between items
+    width: width * 0.28, 
+    aspectRatio: 1, 
+    margin: '2%', 
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  touchable: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 15,
+    overflow: 'hidden',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 6, 
   },
   image: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover", // Makes image fully cover the icon
-    borderRadius: 10, // Optional: round corners
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain', 
   },
 });
 

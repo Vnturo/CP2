@@ -6,7 +6,7 @@ const CampusMapScreen = () => {
   return (
     <View style={styles.container}>
       <WebView 
-        source={{ uri: 'https://www.google.com/maps/place/Goldsmiths,+University+of+London' }} 
+        source={{ uri: 'https://www.gold.ac.uk/campus-map/' }} 
         style={{ flex: 1 }} 
       />
     </View>
