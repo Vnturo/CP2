@@ -5,7 +5,9 @@ import HomeScreen from '../screens/HomeScreen';
 import WebViewScreen from '../screens/WebViewScreen';
 import CampusMapScreen from '../screens/CampusMapScreen';
 import EmailScreen from '../screens/EmailScreen';
+import RoomFinderScreen from '../screens/RoomFinderScreen';
 import FoodScreen from '../screens/FoodScreen';
+import BusTrainTimesScreen from '../screens/BusTrainTimesScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +20,8 @@ const AppNavigator = () => {
         <Stack.Screen name="CampusMap" component={CampusMapScreen} />
         <Stack.Screen name="EmailScreen" component={EmailScreen} />
         <Stack.Screen name="FoodScreen" component={FoodScreen} />
+        <Stack.Screen name="RoomFinder" component={RoomFinderScreen} /> 
+        <Stack.Screen name="BusTrainTimes" component={BusTrainTimesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
