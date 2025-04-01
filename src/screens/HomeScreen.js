@@ -21,13 +21,11 @@ const HomeScreen = ({ navigation }) => {
     { image: require('../../assets/Library.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/library/' },
     { image: require('../../assets/CampusMap.png'), screen: 'CampusMap' },
     { image: require('../../assets/RoomFinder.png'), screen: 'RoomFinder' },
-    { image: require('../../assets/StudentEssentials.png'), screen: 'WebView', url: 'https://student.gold.ac.uk' },
     { image: require('../../assets/Timetable.png'), screen: 'TimeTable' },
     { image: require('../../assets/Careers.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/careers/' },
     { image: require('../../assets/Email.png'), screen: 'EmailScreen' },
     { image: require('../../assets/Food.png'), screen: 'FoodScreen' },
     { image: require('../../assets/Travel.png'), screen: 'BusTrainScreen' },
-    { image: require('../../assets/Wellbeing.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/students/wellbeing/wellbeing-service/' },
   ];
 
   return (
