@@ -26,6 +26,9 @@ The app will launch on your phone
 
 ⚠️ Internet connection is required. ⚠️
 
+
+
+
 💻 Developer Setup (Optional)
 If you want to modify the source code or run the app locally, follow these steps:
 
