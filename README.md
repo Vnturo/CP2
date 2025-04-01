@@ -7,7 +7,7 @@ The easiest way to run this app is by using Expo Go – no coding or setup requi
 
 📱 Scan the QR Code below using the Expo Go app:
 
-![image](https://github.com/user-attachments/assets/81c04343-ab64-4706-a5eb-fa718a8a2cc7)
+
 
 How to do it:
 Download Expo Go:
