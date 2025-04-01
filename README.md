@@ -4,7 +4,7 @@ This is a mobile app built with React Native and Expo, designed to support the d
 🚀 Try It Instantly on Your Phone
 The easiest way to run this app is by using Expo Go – no coding or setup required.
 
-🔗 [Click here to view the app on Expo](https://expo.dev/@vnturo/goldsmithsapp)
+🔗 [Click here to view the app on Expo](https://expo.dev/accounts/vnturo/projects/goldsmithsapp)
 
 
 OR
