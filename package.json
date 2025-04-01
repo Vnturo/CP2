@@ -10,16 +10,21 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-async-storage/async-storage": "1.23.1",
     "@react-navigation/native": "^7.0.15",
     "@react-navigation/stack": "^7.1.2",
     "expo": "^52.0.40",
+    "expo-auth-session": "~6.0.3",
+    "expo-crypto": "~14.0.2",
     "expo-linear-gradient": "~14.0.2",
     "expo-location": "~18.0.8",
+    "expo-random": "^14.0.1",
     "expo-status-bar": "~2.0.1",
     "expo-updates": "~0.27.1",
+    "expo-web-browser": "~14.0.2",
     "react": "19.0.0",
     "react-native": "0.78.0",
+    "react-native-dotenv": "^3.4.11",
     "react-native-gesture-handler": "^2.24.0",
     "react-native-reanimated": "^3.17.1",
     "react-native-safe-area-context": "^5.3.0",
@@ -27,7 +32,8 @@
     "react-native-svg": "^15.11.2",
     "react-native-vector-icons": "^10.2.0",
     "react-native-webview": "^13.13.4",
-    "setimmediate": "^1.0.5"
+    "setimmediate": "^1.0.5",
+    "expo-calendar": "~14.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

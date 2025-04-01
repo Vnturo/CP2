@@ -22,7 +22,7 @@ const HomeScreen = ({ navigation }) => {
     { image: require('../../assets/CampusMap.png'), screen: 'CampusMap' },
     { image: require('../../assets/RoomFinder.png'), screen: 'RoomFinder' },
     { image: require('../../assets/StudentEssentials.png'), screen: 'WebView', url: 'https://student.gold.ac.uk' },
-    { image: require('../../assets/Timetable.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/students/timetable/' },
+    { image: require('../../assets/Timetable.png'), screen: 'TimeTable' },
     { image: require('../../assets/Careers.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/careers/' },
     { image: require('../../assets/Email.png'), screen: 'EmailScreen' },
     { image: require('../../assets/Food.png'), screen: 'FoodScreen' },
