@@ -33,9 +33,10 @@ The app will launch on your phone
 If you want to modify the source code or run the app locally, follow these steps:
 
 1. Clone the Repo
+
 git clone https://github.com/Vnturo/CP2.git
 
-  cd GoldsmithsApp
+cd GoldsmithsApp
 
 3. Install Dependencies
 
