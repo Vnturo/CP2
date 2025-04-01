@@ -38,9 +38,11 @@ git clone https://github.com/Vnturo/CP2.git
   cd GoldsmithsApp
 
 3. Install Dependencies
+
 npm install
 
 4. Run the App
+
 npx expo start
 
 Then:
