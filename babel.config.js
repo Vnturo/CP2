@@ -1,9 +1,14 @@
+<<<<<<< Updated upstream
 module.exports = function(api) {
+=======
+module.exports = function (api) {
+>>>>>>> Stashed changes
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: [
       ['module:react-native-dotenv', {
+<<<<<<< Updated upstream
         "moduleName": "@env",
         "path": ".env",
         "blacklist": null,
@@ -12,5 +17,11 @@ module.exports = function(api) {
         "allowUndefined": true
       }]
     ]
+=======
+        moduleName: '@env',
+        path: '.env',
+      }],
+    ],
+>>>>>>> Stashed changes
   };
 };
