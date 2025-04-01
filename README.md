@@ -4,7 +4,8 @@ This is a mobile app built with React Native and Expo, designed to support the d
 🚀 Try It Instantly on Your Phone
 The easiest way to run this app is by using Expo Go – no coding or setup required.
 
-🔗 Click here to view the app on Expo
+🔗 [Click here to view the app on Expo](https://expo.dev/@vnturo/goldsmiths-campus-app)
+
 OR
 
 📱 Scan the QR Code below using the Expo Go app:
