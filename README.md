@@ -1,81 +1,48 @@
 Goldsmiths Student App (React Native)
-This is a mobile app built with React Native and Expo, designed to support the daily needs of Goldsmiths students. Features include live TfL transport updates, cafeteria menus, room finding, and more all in one place.
 
-🚀 Try It Instantly on Your Phone
-The easiest way to run this app is by using Expo Go – no coding or setup required.
+This is a mobile app built with React Native and Expo, designed to support the daily needs of Goldsmiths students. Features include live TfL transport updates, cafeteria menus, room finding, and more — all in one place.
 
+How to Run the App
 
-📱 Scan the QR Code below using the Expo Go app:
+Download Expo Go
+Download and install the Expo Go app on your phone:
 
+iOS: Available on the App Store
 
+Android: Available on Google Play Store
 
-How to do it:
-Download Expo Go:
+Developer Setup (if testing on a computer)
+If you want to run the app on your computer, you'll need:
 
-iOS App Store
+Android Studio (for the emulator)
 
-Google Play Store
+Node.js and npm
 
-Open Expo Go and tap "Scan QR Code"
+Expo CLI
 
-Point your camera at the QR code above
+Then follow these steps:
 
-The app will launch on your phone
-
-⚠️ Internet connection is required. ⚠️
-
-
-
-
-💻 Developer Setup (Optional)
-If you want to modify the source code or run the app locally, follow these steps:
-
-1. Clone the Repo
 
 git clone https://github.com/Vnturo/CP2.git
 
-cd GoldsmithsApp
-
-3. Install Dependencies
+cd CP2
 
 npm install
 
-4. Run the App
-
 npx expo start
 
-Then:
+You can press a to open the Android emulator in Android Studio.
 
-Press i to launch iOS simulator
+Requirements
 
-Press a to launch Android emulator
+Expo Go app installed on your mobile device.
 
-Or scan the QR code in the terminal using Expo Go
+Android Studio installed on your computer with a virtual device/emulator set up.
 
-🛠 Technologies Used
-React Native
+Git and Node.js installed.
 
-Expo
+If You Have Issues
 
-React Navigation
+If you encounter any problems running the app, please contact me at:
 
-TfL API
-
-FlatList UI components
-
-
-
-📋 Features
-
-🚌 Live bus/train times via TfL
-
-🍱 Daily cafeteria menu
-
-🗺️ Campus map and room finder
-
-🧠 Wellbeing resources
-
-📅 Timetable support
-
-
-
+vrosa003@campus.goldsmiths.ac.uk
