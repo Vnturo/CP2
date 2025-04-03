@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image, ScrollView } from 'react-native';
-
+//function for all foods for different days
 const FoodScreen = () => {
   const menu = {
     Monday: {
@@ -45,7 +45,7 @@ const FoodScreen = () => {
     },
   };
 
-  // 🥤 Drinks (Same Every Day)
+  //drinks (Same Every Day)
   const drinks = [
     { name: 'Bottled Water', price: '£1.00', image: require('../../assets/food/water.jpg') },
     { name: 'Soft Drink (Coke, Sprite, Fanta)', price: '£1.50', image: require('../../assets/food/soft_drink.jpg') },

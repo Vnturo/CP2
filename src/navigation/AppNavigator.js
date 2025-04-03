@@ -12,7 +12,6 @@ import TimeTable from '../screens/ManualTimetableScreen';
 
 
 const Stack = createStackNavigator();
-
 const AppNavigator = () => {
   return (
     <NavigationContainer>

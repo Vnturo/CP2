@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, Button, Linking } from 'react-native';
 
 const EmailScreen = ({ navigation }) => {
-  // Function to open the email app
+  //function to open the email app
   const openEmailApp = () => {
-    const email = 'mailto:'; // This will open the email client
+    const email = 'mailto:';
     Linking.openURL(email).catch((err) => console.error("Error opening email app", err));
   };
 
-  // Automatically open the email app when screen loads
+  //automatically open the email app when screen loads
   useEffect(() => {
     openEmailApp();
   }, []);
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#257f66',
-    padding: 20, // Add some padding to the screen
+    padding: 20, 
   },
   text: {
     fontSize: 18,
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonContainer: {
-    width: '80%', // Ensures buttons are uniform width
-    marginBottom: 20, // Adds space below each button
+    width: '80%', 
+    marginBottom: 20, 
   },
 });
 
