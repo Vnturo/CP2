@@ -3,7 +3,7 @@ import { View, StyleSheet, ActivityIndicator } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const WebViewScreen = ({ route }) => {
-  const { url } = route.params || { url: 'https://www.gold.ac.uk' }; // Default URL fallback
+  const { url } = route.params || { url: 'https://www.gold.ac.uk' };
 
   return (
     <View style={styles.container}>
@@ -20,7 +20,7 @@ const WebViewScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 35, // Adds space below the phone’s battery bar
+    paddingTop: 35,
   },
   webView: {
     flex: 1,
