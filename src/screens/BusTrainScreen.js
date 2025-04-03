@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+//import necessary React Native components
 import {
   View,
   Text,
@@ -9,18 +10,23 @@ import {
   ScrollView,
 } from 'react-native';
 
+//define your TFL API key
 const API_KEY = '4645be5f2d5b4333af04661db9823aa4';
 
+//define fixed list of bus stop points
 const BUS_STOPS = [
   { id: '490007276Y', name: 'Marquis of Granby (Stop Y)' },
   { id: '490007276X', name: 'Marquis of Granby (Stop X)' },
 ];
 
+//define fixed list of train stations
 const TRAIN_STATIONS = [
   { id: 'HUBNXG', name: 'New Cross Gate'}
 ];
 
+//main functional component
 const BusTrainScreen = () => {
+  //state for bus and train arrivals
   const [busArrivals, setBusArrivals] = useState([]);
   const [trainArrivals, setTrainArrivals] = useState([]);
   const [loadingBus, setLoadingBus] = useState(false);
@@ -28,6 +34,7 @@ const BusTrainScreen = () => {
   const [selectedStop, setSelectedStop] = useState('');
   const [selectedStation, setSelectedStation] = useState('');
 
+  //fetch live bus arrivals using stop ID
   const fetchBusArrivals = async (stopId) => {
     setSelectedStop(stopId);
     setLoadingBus(true);
@@ -49,6 +56,7 @@ const BusTrainScreen = () => {
     setLoadingBus(false);
   };
 
+  //fetch live train arrivals using station ID
   const fetchTrainArrivals = async (stationId) => {
     setSelectedStation(stationId);
     setLoadingTrain(true);
@@ -70,8 +78,10 @@ const BusTrainScreen = () => {
     setLoadingTrain(false);
   };
 
+  //main render layout
   return (
     <ScrollView style={styles.container}>
+      {/* bus section */}
       <Text style={styles.title}>🚌 Bus Stops</Text>
       {BUS_STOPS.map((stop) => (
         <TouchableOpacity
@@ -83,6 +93,7 @@ const BusTrainScreen = () => {
         </TouchableOpacity>
       ))}
 
+      {/* bus arrivals */}
       <Text style={styles.subtitle}>
         {selectedStop ? `Live Bus Arrivals (${selectedStop})` : 'Select a stop'}
       </Text>
@@ -107,6 +118,7 @@ const BusTrainScreen = () => {
         />
       )}
 
+      {/* train section */}
       <Text style={styles.title}>🚉 Train Station</Text>
       {TRAIN_STATIONS.map((station) => (
         <TouchableOpacity
@@ -118,6 +130,7 @@ const BusTrainScreen = () => {
         </TouchableOpacity>
       ))}
 
+      {/* train arrivals */}
       <Text style={styles.subtitle}>
         {selectedStation ? `Live Train Arrivals (${selectedStation})` : 'Select a station'}
       </Text>
@@ -145,6 +158,7 @@ const BusTrainScreen = () => {
   );
 };
 
+//styling for all elements
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -166,7 +180,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   stopButton: {
-    backgroundColor: '#b02a30', // red
+    backgroundColor: '#b02a30',
     padding: 12,
     borderRadius: 8,
     marginVertical: 6,

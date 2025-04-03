@@ -1,16 +1,18 @@
 import React from 'react';
+//import required components from react-native and react-native-webview
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+//define the room finder screen component
 const RoomFinderScreen = () => {
-  // Inject JavaScript to remove unnecessary elements & improve UI
+  //inject javascript to remove unnecessary elements & improve UI
   const injectedCSS = `
     document.body.style.overflow = 'hidden'; 
     document.documentElement.style.overflow = 'hidden';
     document.body.style.margin = '0';
     document.body.style.padding = '0';
 
-    // Hide headers, footers, sidebars, and unnecessary elements
+    //hide headers, footers, sidebars, and unnecessary elements
     let header = document.querySelector('header');
     if (header) header.style.display = 'none';
 
@@ -23,9 +25,10 @@ const RoomFinderScreen = () => {
     let banner = document.querySelector('.banner'); 
     if (banner) banner.style.display = 'none';
 
-    true; // Ensures the script runs properly
+    true; //ensures the script runs properly
   `;
 
+  //render the embedded webview with loader and injected custom js
   return (
     <View style={styles.container}>
       <WebView
@@ -37,16 +40,17 @@ const RoomFinderScreen = () => {
         )}
         javaScriptEnabled={true}
         domStorageEnabled={true}
-        injectedJavaScript={injectedCSS} // Injects the CSS to modify WebView content
+        injectedJavaScript={injectedCSS}
       />
     </View>
   );
 };
 
+//define the component's styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff', // Match your app’s theme
+    backgroundColor: '#fff',
   },
   webview: {
     flex: 1,
@@ -60,4 +64,5 @@ const styles = StyleSheet.create({
   },
 });
 
+//export the component
 export default RoomFinderScreen;

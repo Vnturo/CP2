@@ -1,13 +1,20 @@
 import React, { useEffect, useRef } from 'react';
+//import components and utilities from react-native
 import { View, StyleSheet, FlatList, Text, Animated, Dimensions } from 'react-native';
+//import custom grid item component
 import GridItem from '../components/GridItem';
+//import linear gradient for background styling
 import { LinearGradient } from 'expo-linear-gradient';
 
+//get device screen width
 const { width } = Dimensions.get('window');
 
+//define the home screen component
 const HomeScreen = ({ navigation }) => {
+  //create animated value for fade-in effect
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
+  //run animation when component mounts
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
@@ -16,6 +23,7 @@ const HomeScreen = ({ navigation }) => {
     }).start();
   }, []);
 
+  //define menu items with associated images and screen navigation targets
   const menuItems = [
     { image: require('../../assets/learngold.png'), screen: 'WebView', url: 'https://learn.gold.ac.uk' },
     { image: require('../../assets/Library.png'), screen: 'WebView', url: 'https://www.gold.ac.uk/library/' },
@@ -29,12 +37,15 @@ const HomeScreen = ({ navigation }) => {
   ];
 
   return (
+    //wrap the screen in a gradient background
     <LinearGradient colors={['#0d5b43', '#257f66']} style={styles.gradient}>
       <View style={styles.container}>
+        {/*fade-in header text*/}
         <Animated.Text style={[styles.header, { opacity: fadeAnim }]}>
           Welcome to Goldsmiths App 🌟
         </Animated.Text>
-        
+
+        {/*display menu items in a 3-column grid*/}
         <FlatList
           data={menuItems}
           numColumns={3}
@@ -52,6 +63,7 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
+//define styles for the screen layout
 const styles = StyleSheet.create({
   gradient: {
     flex: 1,
@@ -74,4 +86,5 @@ const styles = StyleSheet.create({
   },
 });
 
+//export the component
 export default HomeScreen;
