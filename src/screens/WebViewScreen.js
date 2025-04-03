@@ -6,8 +6,7 @@ import { WebView } from 'react-native-webview';
 
 //main component to render the webview screen
 const WebViewScreen = ({ route }) => {
-  //get url from navigation route params, fallback to goldsmiths homepage
-  const { url } = route.params || { url: 'https://www.gold.ac.uk' };
+  const { url } = route.params || { url: 'https://www.gold.ac.uk' }; // Default URL fallback
 
   return (
     <View style={styles.container}>
@@ -27,7 +26,7 @@ const WebViewScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 35, //adds top padding to prevent overlap with status bar
+    paddingTop: 35, // Adds space below the phone’s battery bar
   },
   webView: {
     flex: 1, //fills remaining screen space
